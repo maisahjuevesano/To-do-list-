@@ -11,6 +11,8 @@ let toDos = [
   new Tasks("sova", false),
 ];
 
+console.log(toDos);
+
 for (let i = 0; i < toDos.length; i++) {
   let ulTag = document.getElementById("firstUl");
   let liTag = document.createElement("li");
@@ -22,9 +24,16 @@ for (let i = 0; i < toDos.length; i++) {
   checkRuta.type = "checkbox";
   checkRuta.addEventListener("click", () => {
     if (checkRuta.checked === true) {
-      liTag.style.textDecoration = "line-through";
+      liTag.classList.add("styling");
+      toDos[i].done = true;
+      console.log(toDos);
+      // liTag.style.textDecoration = "line-through";
+      // liTag.classList.add("liTag");
+      // liTag.className = "styling"; //funkar
     } else {
-      liTag.style.textDecoration = "none";
+      liTag.classList.remove("styling");
+      toDos[i].done = false;
+      // liTag.style.textDecoration = "none";
     }
   });
 
