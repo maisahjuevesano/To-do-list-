@@ -1,12 +1,27 @@
 html,
 body {
-  background-color: rgb(247, 187, 223);
+  background-color: rgb(255, 249, 172);
   display: flex;
   flex-direction: column;
 }
 
 h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   font-size: 50px;
+}
+
+.firstUl {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-type: none;
+}
+
+.secondDiv {
+  display: flex;
+  flex-direction: column;
 }
 
 #inputField {
@@ -22,9 +37,14 @@ h1 {
 }
 
 .liTag {
-  color: green;
+  font-size: 40px;
+}
+
+.liTagSecond {
+  font-size: 40px;
 }
 
 .styling {
-  background-color: green;
+  background-color: rgb(151, 208, 151);
+  text-decoration: line-through;
 }

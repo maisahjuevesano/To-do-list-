@@ -15,7 +15,9 @@ console.log(toDos);
 
 for (let i = 0; i < toDos.length; i++) {
   let ulTag = document.getElementById("firstUl");
+  ulTag.classList.add("firstUl");
   let liTag = document.createElement("li");
+  liTag.classList.add("liTag");
   liTag.innerHTML = toDos[i].task;
 
   ulTag.appendChild(liTag);
@@ -27,13 +29,9 @@ for (let i = 0; i < toDos.length; i++) {
       liTag.classList.add("styling");
       toDos[i].done = true;
       console.log(toDos);
-      // liTag.style.textDecoration = "line-through";
-      // liTag.classList.add("liTag");
-      // liTag.className = "styling"; //funkar
     } else {
       liTag.classList.remove("styling");
       toDos[i].done = false;
-      // liTag.style.textDecoration = "none";
     }
   });
 
@@ -45,28 +43,38 @@ let toDoContainer = document.getElementById("toDoContainer");
 let inputField = document.getElementById("inputField");
 let ul = document.getElementById("ul");
 
+//min deletebutton
+let deleteButton = document.getElementById("removeToDo");
+deleteButton.addEventListener("click", remove); //min delete knapp är klickbar nu
+
+function remove() {
+  console.log("Hurra du klickade på delete knappen!"); // den fungerar, dock ska denna knapp vara i litagen så man vill skapa den på samma sätt som min checkbox
+}
+
 //jag vill lägga till så man kan lägga till via tangentbordet
 
 addToDoButton.addEventListener("click", add);
 
 function add(event) {
   event.preventDefault();
-  let text = document.createElement("li");
-  // text.classList.add("paragraph-styling");
+  let liTagSecond = document.createElement("li");
+  liTagSecond.classList.add("liTagSecond");
+  // liTagSecond.classList.add("paragraph-styling");
 
-  text.innerHTML = inputField.value;
+  liTagSecond.innerHTML = inputField.value;
   let checkRuta = document.createElement("input");
   checkRuta.type = "checkbox";
 
-  text.appendChild(checkRuta);
-  toDoContainer.appendChild(text);
-  ul.appendChild(text);
+  liTagSecond.appendChild(checkRuta);
+  toDoContainer.appendChild(liTagSecond);
+  ul.appendChild(liTagSecond);
   inputField.value = "";
   checkRuta.addEventListener("click", () => {
     if (checkRuta.checked === true) {
-      text.style.textDecoration = "line-through";
+      liTagSecond.classList.add("styling");
     } else {
-      text.style.textDecoration = "none";
+      liTagSecond.classList.remove("styling");
+      toDos[i].done = false;
     }
   });
 }
