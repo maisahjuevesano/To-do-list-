@@ -1,13 +1,10 @@
 import { Tasks } from "./models/Todo";
-// import { TextInMyButtons } from "./models/Text";
 
 let toDoList = [
   new Tasks("studdy", false),
   new Tasks("eat", false),
   new Tasks("sova", false),
 ];
-
-// let buttonText = [new TextInMyButtons("done"), new TextInMyButtons("delete")];
 
 let addToDoButton = document.getElementById("addToDo");
 let divTag = document.getElementById("divId");
@@ -44,13 +41,9 @@ function showList() {
 
     //skapar en deletebutton
     let deletebutton = document.createElement("button");
+    deletebutton.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
     deletebutton.classList.add("deletebutton");
     liTag.appendChild(deletebutton); //lägger in min button i min litag så den dyker upp när en li skapas
-
-    // //skapar en span så jag kan ha en text i min button
-    // let deleteText = document.createElement("span");
-    // deleteText.classList.add("deleteText"); //min klass heter deleteText som jag ska snart redigera
-    // deletebutton.appendChild(deleteText);
 
     /***********************Här ska mina funktioner vara******************************/
 
