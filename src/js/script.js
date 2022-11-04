@@ -17,7 +17,6 @@ function displayList() {
   divTag.innerHTML = "";
 
   for (let i = 0; i < toDoList.length; i++) {
-    //inuti här ska jag hämta mina taggar med hjälp av mina id från html. "fångar dom med en variabel"
     let ulTag = document.createElement("ul");
     ulTag.classList.add("ulTag");
 

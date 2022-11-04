@@ -44,7 +44,6 @@ h1 {
   flex-direction: column;
   justify-items: center;
   list-style-type: none;
-  background-color: rgb(184, 156, 228);
 }
 
 li {
@@ -55,6 +54,10 @@ li {
   background-color: rgb(184, 156, 228);
   color: rgb(255, 255, 255);
   width: 100%;
+
+  &:hover {
+    background-color: rgb(184, 182, 182);
+  }
 
   @include m.tablet {
     font-size: xx-large;
