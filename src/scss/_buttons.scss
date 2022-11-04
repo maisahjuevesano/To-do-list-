@@ -1,12 +1,16 @@
+@use "mixins" as m;
+
 .checkbox {
   font-size: 50px;
   width: 70px;
 }
-.deletebutton {
-  font-size: 40px;
-  width: 60px;
+
+.addToDoButton {
+  width: 102%;
+  margin-top: 2%;
 }
 
-.fa-regular {
-  color: red;
+.deletebutton {
+  background-color: rgb(255, 0, 0);
+  width: 10%;
 }

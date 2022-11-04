@@ -7,6 +7,7 @@ let toDoList = [
 ];
 
 let addToDoButton = document.getElementById("addToDo");
+addToDoButton.classList.add("addToDoButton");
 let divTag = document.getElementById("divId");
 let inputField = document.getElementById("inputField");
 
@@ -33,7 +34,7 @@ function displayList() {
 
     //skapar en deletebutton
     let deletebutton = document.createElement("button");
-    deletebutton.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+    deletebutton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     deletebutton.classList.add("deletebutton");
     liTag.appendChild(deletebutton);
 

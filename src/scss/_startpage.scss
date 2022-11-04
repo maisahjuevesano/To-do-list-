@@ -1,5 +1,8 @@
+@use "mixins" as m;
+
 html,
 body {
+  margin: 0%;
   background-color: rgb(136, 110, 216);
   display: flex;
   flex-direction: column;
@@ -9,9 +12,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 50%;
-  border: 5px solid lightblue;
-  background-color: lightblue;
 
   &__second {
     display: flex;
@@ -21,39 +21,47 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   display: flex;
   justify-content: center;
+
+  @include m.tablet {
+    font-size: 50px;
+  }
 }
 
 #inputField {
-  font-size: 50px;
-}
+  width: 100%;
 
-#addToDo {
-  font-size: 50px;
+  @include m.tablet {
+    font-size: x-large;
+  }
 }
 
 .ulTag {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   list-style-type: none;
+  background-color: rgb(184, 156, 228);
 }
 
 li {
   display: flex;
-  flex-direction: row;
-  font-size: 50px;
-  // border: 1px solid rgb(255, 159, 159);
+  text-align: end;
+  font-size: 110%;
   border-radius: 1;
   background-color: rgb(184, 156, 228);
-  color: azure;
+  color: rgb(255, 255, 255);
+  width: 100%;
+
+  @include m.tablet {
+    font-size: xx-large;
+  }
 }
 
-.liTag {
-  list-style-type: none;
-  color: green;
-}
-
+//denna styling sker när man bockar checklistan
 .li-style {
   background-color: rgb(151, 208, 151);
   text-decoration: line-through;
