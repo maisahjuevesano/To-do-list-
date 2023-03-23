@@ -1,4 +1,4 @@
-import { Tasks } from "./models/Todo";
+import { Tasks } from "./models/Todo"
 
 let toDoList = [
   new Tasks("studdy", false),
